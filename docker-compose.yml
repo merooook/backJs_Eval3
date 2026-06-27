@@ -1,0 +1,14 @@
+services:
+  app:
+    build: .
+    container_name: user-service
+    restart: on-failure
+    ports:
+      - "8081:8081"
+    environment:
+      - DB_HOST=user-service-db.ci4h9xjnyn4x.us-east-1.rds.amazonaws.com
+      - DB_PORT=3306
+      - DB_USER=root
+      - DB_PASSWORD=7bALALtam2t4NAv
+      - DB_NAME=user-service-db
+      - PORT=8081
